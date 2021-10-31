@@ -1,0 +1,12 @@
+[Unit]
+Description=Set the battery charge threshold
+After=multi-user.target
+StartLimitBurst=0
+
+[Service]
+Type=oneshot
+Restart=on-failure
+ExecStart=/path/to/battery/power/file.sh
+
+[Install]
+WantedBy=multi-user.target
